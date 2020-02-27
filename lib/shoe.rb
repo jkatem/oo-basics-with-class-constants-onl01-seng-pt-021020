@@ -4,12 +4,23 @@ class Shoe
 
   BRANDS = []
 
+  # def initialize(brand)
+  #
+  #   if BRANDS.include?(brand)
+  #     @brand = brand
+  #   else
+  #     BRANDS << brand
+  #   end
+  # end
+
+  # def initialize(brand)
+  #   @brand = brand
+  #   Brands << brand unless BRANDS.include?(brand)
+  # end
+
   def initialize(brand)
     @brand = brand
-    if BRANDS.include?(brand)
-    else
-      BRANDS << brand
-    end 
+    BRANDS << brand unless BRANDS.include?(brand)
   end
 
   def cobble
